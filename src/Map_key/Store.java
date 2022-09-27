@@ -22,6 +22,5 @@ public class Store {
         } else {
             System.out.println(item + " is not in stock");
         }
-
     }
 }
