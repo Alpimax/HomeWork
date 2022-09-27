@@ -8,10 +8,27 @@ public class Countries {
         Map<String, List<String>> countries = new HashMap<>();
         countries.put("United States", new ArrayList<>(Arrays.asList("Chicago", "Dallas", "Irvine", "San Diego", "New York", "Philadelphia", "Madison")));
 
-        System.out.println(countries);
+        // Arrays.asList() --> immutable List
+
+        System.out.println("MAP " + countries);
 
         countries.get("United States").add("Seattle");
+        System.out.println("ARRAYLIST " + countries.get("United States"));
+        System.out.println("FIRST CITY " + countries.get("United States").get(0)); // first get is from map, then second get is from arraylist
+
+        countries.put("Europe", new ArrayList<>(Arrays.asList("London", "Paris", "Rome", "Istanbul", "Berlin", "Madrid")));
+        countries.put("Uzbekistan", new ArrayList<>(Arrays.asList("Tashkent", "Samarkand", "Bukhara", "Fergana", "Urgench", "Khiva", "Bakht")));
+        countries.put("Kazakhstan", new ArrayList<>(Arrays.asList("Petropavlovsk", "Astana", "Almaty", "Aktobe", "Kokshetau")));
+
         System.out.println(countries);
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("What country are you going to tour " + countries.keySet());
+        String country = input.next();
+
+        for(String eachCity : countries.get(country)){ // iterate though each city of a specific country
+            System.out.println("Touring.... " + eachCity);
+        }
 
 
     }
