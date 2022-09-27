@@ -24,12 +24,36 @@ public class Countries {
 
         Scanner input = new Scanner(System.in);
         System.out.println("What country are you going to tour " + countries.keySet());
-        String country = input.next();
+        String country = input.nextLine();
 
         for(String eachCity : countries.get(country)){ // iterate though each city of a specific country
             System.out.println("Touring.... " + eachCity);
         }
 
+        System.out.println();
 
+        for(Map.Entry<String, List<String>> eachEntry : countries.entrySet()){
+            for( String eachCity : eachEntry.getValue()){// the value of each Entry was the cities
+                if(eachCity.startsWith("A") || eachCity.endsWith("a")){
+                    System.out.println(eachCity);
+                }
+            }
+        }
+
+//            for(List<String> eachCountry : countries.values()){
+//                for( String eachCity : eachCountry)
+//            }
     }
 }
+
+/*
+
+    { K   V } each one is an entry
+    {United States = [Chicago, Dallas, Irvine, San Diego, New York, Philadelphia, Madison]}
+    {Europe=[London, Paris, Rome, Istanbul, Berlin, Madrid]}
+    {Uzbekistan=[Tashkent, Samarkand, Bukhara, Fergana, Urgench, Khiva, Bakht]}
+    {Kazakhstan=[Petropavlovsk, Astana, Almaty, Aktobe, Kokshetau]}
+
+
+
+ */
