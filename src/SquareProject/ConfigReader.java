@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+
 public class ConfigReader {
 
     private static Properties properties = new Properties();
@@ -26,7 +27,6 @@ public class ConfigReader {
             System.out.println("File not found");
             e.printStackTrace();
         }
-
     }
 
     /*
@@ -35,10 +35,22 @@ public class ConfigReader {
 
         FileInputStream: connect to a file -> allows access to the information in some way
             -> checked exception occurs so we need to handle with try catch
-
      */
 
+    /*
 
+    summary:
 
+        1) creates a properties file called: test.properties
+            had some information
+        2) created a class called ConfigReader
+        3) in Config Reader we created a Properties object
+        4) in the static block we connected to the file, using FileInputStream
+        5) used the load method from the Properties object(3) to load the information from the file to the Properties object
+     */
+
+    public static String getProperty(String key) {
+        return properties.getProperty(key);
+    }
 
 }
