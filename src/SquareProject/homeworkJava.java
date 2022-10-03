@@ -29,6 +29,7 @@ public class homeworkJava {
     //
     //same("abc",  "abb"); -> false
 
+
     public static boolean checkMethod(String first, String second) {
 
         return countFirst(first).equals(countFirst(second));
