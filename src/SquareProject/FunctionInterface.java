@@ -52,6 +52,7 @@ public class FunctionInterface {
                 sum += Integer.parseInt(s.substring(i, i + 1));
             }
 
+
             return sum;
         };
 
