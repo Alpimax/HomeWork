@@ -51,13 +51,9 @@ public class FunctionInterface {
             for (int i = 0; i < s.length(); i++) {
                 sum += Integer.parseInt(s.substring(i, i + 1));
             }
-
-
             return sum;
         };
-
         System.out.println(sumOfDigits.apply("425"));
         System.out.println(sumOfDigits.apply("9184"));
-
     }
 }
